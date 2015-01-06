@@ -9,6 +9,9 @@
 
 3.bundle install
 
+3. do bundle install
+
+
 4. install angular dependencies(the following will create the bower.json file)
 
  	rails g bower_rails:initialize json
@@ -21,5 +24,7 @@
 
 
 
+
  7a. bin/rake db:create
  7b. bin/rake db:create RAILS_ENV=test
+
