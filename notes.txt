@@ -8,3 +8,13 @@
 
 
 3. do bundle install
+
+4. install angular dependencies(the following will create the bower.json file)
+
+ 	rails g bower_rails:initialize json
+
+5. add angular to your json file
+
+
+6. run:
+ bundle exec rake bower:install
