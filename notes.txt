@@ -20,3 +20,5 @@
  7a. bin/rake db:create
  7b. bin/rake db:create RAILS_ENV=test
 
+8. we now need to remove the .js.coffee files since we have realised that we do not need them (was just a more rubish way to do stuff, but we love JS)
+
