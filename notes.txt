@@ -19,3 +19,8 @@
 
 6. run:
  bundle exec rake bower:install
+
+
+
+ 7a. bin/rake db:create
+ 7b. bin/rake db:create RAILS_ENV=test
