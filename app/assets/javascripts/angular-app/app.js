@@ -1,1 +1,1 @@
-var sleazySound = angular.module('sleazySound', [])
+var sleazySound = angular.module('sleazySound', []);
