@@ -6,11 +6,7 @@
 		gem 'bower-rails'
 		gem 'angular-rails-templates'
 
-
-3.bundle install
-
 3. do bundle install
-
 
 4. install angular dependencies(the following will create the bower.json file)
 
@@ -18,12 +14,8 @@
 
 5. add angular to your json file
 
-
 6. run:
  bundle exec rake bower:install
-
-
-
 
  7a. bin/rake db:create
  7b. bin/rake db:create RAILS_ENV=test
