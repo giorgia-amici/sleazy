@@ -7,7 +7,7 @@
 		gem 'angular-rails-templates'
 
 
-3. do bundle install
+3.bundle install
 
 4. install angular dependencies(the following will create the bower.json file)
 
