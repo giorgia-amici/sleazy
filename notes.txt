@@ -1,9 +1,10 @@
-npm install bower 
+1. npm install bower 
+	(put node modules in your .gitignore)
 
-add bower-rails to the Gemfile:
+2. add bower-rails  and angular to the Gemfile by typing:
 
-+gem 'bower-rails'
+		gem 'bower-rails'
+		gem 'angular-rails-templates'
 
-do bundle install
 
-gem 'angular-rails-templates'
+3. do bundle install
