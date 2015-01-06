@@ -1,0 +1,9 @@
+npm install bower 
+
+add bower-rails to the Gemfile:
+
++gem 'bower-rails'
+
+do bundle install
+
+gem 'angular-rails-templates'
