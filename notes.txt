@@ -16,7 +16,6 @@
 5. add angular to your json file
 
 
-
 6. run:
  bundle exec rake bower:install
 
