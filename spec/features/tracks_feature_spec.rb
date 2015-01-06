@@ -4,7 +4,7 @@ feature 'tracks' do
   context 'no tunes have been added' do
     scenario 'should say no tunes' do
       visit '/tracks'
-      expect(page).to have_content 'hello world'
+      expect(page).to have_content 'hello'
     end
   end
 end
