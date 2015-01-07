@@ -1,10 +1,11 @@
-<html ng-app="sleazySound">
+<html ng-app="app">
 <head>
 </head>
-<body>
-<p ng-controller="testCtrl"> {{ test.name }} </p>
+<body ng-controller="test">
+{{test}}
 </body>
-<script src="../assets/javascripts/application.js"></script>
-<script src="../assets/javascripts/angular-app/app.js"></script>
-<script src="../assets/javascripts/angular-app/controllers/testCtrl.js"></script>
+<script> 
+		angular.module('app').controller('test', function($scope)
+			{ console.log($scope); $scope.test = 'HELLO'});
+</script>
 </html>
