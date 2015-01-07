@@ -1,18 +1,31 @@
 angular.module('app').controller('test', function($scope, $http){
-		// http://api.soundcloud.com/tracks/HateitOrLoveIt?client_id=0a3ed6b878677694faa3a0067c36d52c
-		// http://api.soundcloud.com/tracks/halo?client_id=0a3ed6b878677694faa3a0067c36d52c
-// 112436777
-	$scope.activateSearch = function(){
-		var songToSearch = $scope.toSearch
- 		console.log($scope.toSearch)
-		var searchSong = $http.get("http://api.soundcloud.com/tracks/" + songToSearch + "?client_id=0a3ed6b878677694faa3a0067c36d52c")
- 		searchSong
- 		.success(function($scope){
- 			var track = $scope.permalink_url
- 			SC.oEmbed(track, document.getElementById('player'));
- 		})
- 	}
- 		// $scope.doSearch = function(){
 
- 		// }
+	SC.initialize({
+		client_id: 'd1833a816c234ee6c77a76e948e9dbd1'
+	})
+
+	$scope.removeSpace = function(string){
+	  return string.split(' ').join(''); 
+	}
+	$scope.activateSearch = function(){
+		$scope.toSearch = $scope.removeSpace($scope.toSearchTemp)
+ 		var songToSearch = $scope.toSearch
+ 		// console.log(songToSearch)
+				var searchSong = $http.get("http://api.soundcloud.com/tracks.json?client_id=d1833a816c234ee6c77a76e948e9dbd1&q=" + songToSearch + "&limit=55")
+		 		.success(function(songs){
+				 			$scope.list = []
+				 			songs.forEach(function(song){
+				 			var track = song.permalink_url
+				 				$scope.list.push(song)
+				 			// firstTrack = songs[0].permalink_url
+		 			})
+				 				console.log($scope.list)
+		 			// SC.oEmbed(firstTrack, document.getElementById('wrapper'));
+		 		})
+ }
+
+
+
+
+
 });

@@ -18,14 +18,18 @@
 
         <div id="wrap">
         <form id="searchingForm" ng-submit="activateSearch()">
-        <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearch"><input id="search_submit" value="Rechercher" type="submit">
+        <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearchTemp"><input id="search_submit" value="Rechercher" type="submit">
         </form>
         
 </div>
-  <ul id="player"></ul>
+  <ul id="wrapper" ng-repeat="song in list">
+    <li>
+  <a ng-href="{{song.permalink_url}}">{{song.title}}</a>
+   </li>
+
+  </ul>
     </center>
   </body>
 
 </html>
-
 
