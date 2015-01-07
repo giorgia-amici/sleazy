@@ -1,11 +1,14 @@
 <html ng-app="app">
-<head>
-</head>
-<body ng-controller="test">
-{{test}}
-</body>
+  <head>
+  <link rel="shotcut icon" type="image/ico" href="../../assets/images/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/application.css" />
+  <title> sleazy sounds </title>
+  </head>
+  <body ng-controller="test">
+  {{test}}
 <script> 
 		angular.module('app').controller('test', function($scope)
 			{ console.log($scope); $scope.test = 'HELLO'});
 </script>
+      </body>
 </html>
