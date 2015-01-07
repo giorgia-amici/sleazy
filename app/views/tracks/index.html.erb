@@ -1,16 +1,31 @@
  <html ng-app="app">
    <head> 
    <script src="//connect.soundcloud.com/sdk.js"></script>
+   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
    <title> sleazy sounds </title>
    </head>
    <body ng-controller="test">
-    	  <form id="searchingForm" ng-submit="activateSearch()">
-        <input type="text" ng-model="toSearch">
-        <button type="submit"> Search </button>
-        <!-- ng-model="searchTerm" ng-change="doSearch() -->
-        <br>
-      </form>
-   <a href="{{permalink_url}}" target="_"> song</a>
-   <ul id="player"></ul>
-       </body>
+   <center>
+
+   <header>
+   
+   <h2>Sleazy <%= image_tag "sleazy.png" %> Sounds </h2>
+   </header>
+     <!--  <form id="searchingForm" ng-submit="activateSearch()">
+      <input type="text" class="search" ng-model="toSearch">
+      </form> -->
+        
+
+        <div id="wrap">
+  <form id="searchingForm" ng-submit="activateSearch()">
+  <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearch"><input id="search_submit" value="Rechercher" type="submit">
+  </form>
+  
+</div>
+  <ul id="player"></ul>
+    </center>
+  </body>
+
 </html>
+
+
