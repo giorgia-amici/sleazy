@@ -3,13 +3,15 @@
    <script src="//connect.soundcloud.com/sdk.js"></script>
    <title> sleazy sounds </title>
    </head>
-   <body ng-controller="test" ng-submit="activateSearch()">
-    	  <form id="searchingForm">
+   <body ng-controller="test">
+    	  <form id="searchingForm" ng-submit="activateSearch()">
         <input type="text" ng-model="toSearchTemp">
         <button type="submit"> Search </button>
         <br>
       </form>
-   <!-- <a href="{{permalink_url}}" target="_"> song</a> -->
-   <ul id="wrapper"></ul>
+   <ul id="wrapper">
+  <li></li>
+
+     </ul>
    </body>
 </html>
