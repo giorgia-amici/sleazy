@@ -9,8 +9,11 @@
         <button type="submit"> Search </button>
         <br>
       </form>
-   <ul id="wrapper">
-  <li></li>
+   <ul id="wrapper" ng-repeat="song in list">
+  <li>
+  <a ng-href="{{song.permalink_url}}">{{song.title}}</a>
+   </li>
+
 
      </ul>
    </body>
