@@ -32,6 +32,8 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+gem 'rails_12factor'
+
 group :test do 
 	gem 'rspec-rails'
 	gem 'capybara'
