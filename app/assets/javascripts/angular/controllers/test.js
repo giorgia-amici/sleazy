@@ -1,4 +1,2 @@
-// angular.module.controller('controllerTest',
-// 	function controllerTest = function($scope) {
-// 				$scope.test = 'i am a working test'
-// 	});
+angular.module('app').controller('test', function($scope)
+{ console.log($scope); $scope.test = 'DIFF contrroller'});
