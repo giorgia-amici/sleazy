@@ -5,10 +5,11 @@
   <title> sleazy sounds </title>
   </head>
   <body ng-controller="test">
-  {{test}}
-<script> 
-		angular.module('app').controller('test', function($scope)
-			{ console.log($scope); $scope.test = 'HELLO'});
-</script>
-      </body>
+    {{test}}
+    <script> 
+		  angular.module('app').controller('test', function($scope)
+			 { console.log($scope); $scope.test = 'HELLO'});
+    </script>
+    <script src="http://api.soundcloud.com/tracks/13158665.json?client_id=0a3ed6b878677694faa3a0067c36d52c"></script>
+  </body>
 </html>
