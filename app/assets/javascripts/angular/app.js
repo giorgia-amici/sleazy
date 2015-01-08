@@ -1,1 +1,1 @@
-var search = angular.module('app', []);
+angular.module('app', []);

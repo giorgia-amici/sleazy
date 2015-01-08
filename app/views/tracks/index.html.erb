@@ -1,42 +1,51 @@
- <html lang="en" ng-app="app">
-   <head> 
-   <script src="//connect.soundcloud.com/sdk.js"></script>
-   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
-   <title> sleazy sounds </title>
-   </head>
-   <body ng-controller="search">
-   <center>
+<html lang="en" ng-app="app">
+  <head> 
+  <script src="//connect.soundcloud.com/sdk.js" ></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
+  <title> sleazy sounds </title>
+  </head>
+  <body ng-controller="search">
+  <center>
 
-   <header>
-   
-   <h2>Sleazy <%= image_tag "sleazy.png" %> Sounds </h2>
-   </header>
-     <!--  <form id="searchingForm" ng-submit="activateSearch()">
-      <input type="text" class="search" ng-model="toSearch">
-      </form> -->
+  <header>
+  
+  <h2>Sleazy <%= image_tag "sleazy.png", :class => "logo" %> Sounds </h2>
+  </header>
+
         
-
+      <div id="wrap-container">
         <div id="wrap">
-        <form id="searchingForm" ng-submit="activateSearch()">
-        <input class="search" type="text" name="track" placeholder="what track u wnt?" ng-model="toSearchTemp"><input id="search_submit" value="Rechercher" type="submit">
+          <form id="searchingForm" ng-submit="activateSearch()">
+          <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearchTemp" />
+          <input id="search_submit" value="Rechercher" type="submit">
+          </form> 
+          </div>
+        </div>
+
+          <ul id="wrapper" ng-repeat="song in list" >
+            <a ng-click="playStopSong(song)">
+              <img class="artwork" ng-src="{{song.artwork_url}}" />
+            </a>
+          </ul> 
+
+        <a class"test">  <%= image_tag "sleazy.png", :class => "testimg" %> 
+        </a>
+
+        <form id="addPlaylist" ng-submit="submit()">
+        <label for="songToSave"</label>
+        <input id="songToSave" type="text" ng-model="object" placeholder="Hello I am here">
+        <button type="submit">Save</button>
         </form>
-        
-</div>
-  <div id="wrapper" ng-repeat="song in list">
-    <div>
-    <img ng-src="{{song.artwork_url}}" width="450" height="450">
-  	<a ng-href="{{song.permalink_url}}">{{song.title}}</a>
-  	<img ng-src="{{song.waveform_url}}">
-    <% if user_signed_in? %>
-    <%= @user_id = current_user.id %>
-     <%= link_to "Add", new_track_path(@user_id) %>
-    <% end %>
-   </div>
-   
-		<!-- <img ng-src="{{song.artwork_url}}"> -->
-  </div>
+
+    <footer>
+      <div class="options">
+          <a ng-click="" id="add">+</a>
+          <a ng-click="" id="pause">pause</a>
+        </div>
+    </footer>
     </center>
+
+  
   </body>
 
 </html>
-
