@@ -1,6 +1,7 @@
 describe('test', function() {
+	beforeEach(module('test'));
 
-	var scope
+	var scope, ctrl;
 
 	beforeEach(inject(function($rootScope, $controller) {
 		scope = $rootScope.$new();
