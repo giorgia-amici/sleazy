@@ -1,35 +1,38 @@
  <html ng-app="app">
    <head> 
-   <script src="//connect.soundcloud.com/sdk.js"></script>
+   <script src="//connect.soundcloud.com/sdk.js" ></script>
    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
    <title> sleazy sounds </title>
    </head>
    <body ng-controller="test">
-   <center>
 
    <header>
    
-   <h2>Sleazy <%= image_tag "sleazy.png" %> Sounds </h2>
+   <h2>Sleazy <%= image_tag "sleazy.png", :class => "logo" %> Sounds </h2>
    </header>
      <!--  <form id="searchingForm" ng-submit="activateSearch()">
       <input type="text" class="search" ng-model="toSearch">
       </form> -->
         
-
+      <div id="wrap-container">
         <div id="wrap">
-        <form id="searchingForm" ng-submit="activateSearch()">
-        <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearchTemp"><input id="search_submit" value="Rechercher" type="submit">
-        </form>
-        
-</div>
-  <ul id="wrapper" ng-repeat="song in list">
-    <li>
-  <a ng-href="{{song.permalink_url}}">{{song.title}}</a>
-   </li>
+          <form id="searchingForm" ng-submit="activateSearch()">
+          <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearchTemp" />
+          <input id="search_submit" value="Rechercher" type="submit">
+            <ul id="wrapper" ng-repeat="song in list" />
 
-  </ul>
-    </center>
+            <div class="container-2">
+              <li>
+                <a ng-click="playSound()">{{song.title}}</a>
+             </li>
+            </div>
+           </ul>
+          </form>  
+        </div>
+      </div>
+ 
   </body>
 
 </html>
 
+</script>
