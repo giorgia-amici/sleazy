@@ -1,10 +1,10 @@
- <html ng-app="app">
+ <html lang="en" ng-app="app">
    <head> 
    <script src="//connect.soundcloud.com/sdk.js"></script>
    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
    <title> sleazy sounds </title>
    </head>
-   <body ng-controller="test">
+   <body ng-controller="search">
    <center>
 
    <header>
@@ -18,7 +18,7 @@
 
         <div id="wrap">
         <form id="searchingForm" ng-submit="activateSearch()">
-        <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearchTemp"><input id="search_submit" value="Rechercher" type="submit">
+        <input class="search" type="text" name="track" placeholder="what track u wnt?" ng-model="toSearchTemp"><input id="search_submit" value="Rechercher" type="submit">
         </form>
         
 </div>
