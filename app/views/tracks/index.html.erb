@@ -27,20 +27,11 @@
     <img ng-src="{{song.artwork_url}}" width="450" height="450">
   	<a ng-href="{{song.permalink_url}}">{{song.title}}</a>
   	<img ng-src="{{song.waveform_url}}">
+    <% if user_signed_in? %>
+    <%= @user_id = current_user.id %>
+     <%= link_to "Add", new_track_path(@user_id) %>
+    <% end %>
    </div>
-
-   <ul>
-     <li>
-     <% if @tracks.any? %>
-      <%@tracks.each do |track|%>
-      <p> <%= track.id %></p> 
-      <%end %>
-    <%else %>
-      No saved tracks
-    <%end %>
-     </li>
-     <a href='#' name='like'>like</a>
-   </ul>
    
 		<!-- <img ng-src="{{song.artwork_url}}"> -->
   </div>

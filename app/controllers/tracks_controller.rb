@@ -4,8 +4,9 @@ class TracksController < ApplicationController
 		@tracks = Track.all
 	end
 
-  def create
-    
+  def new
+    @track = Track.create(user_id: params["format"])
+    redirect_to '/tracks'
   end
 
 end
