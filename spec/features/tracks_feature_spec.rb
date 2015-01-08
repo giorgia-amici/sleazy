@@ -9,12 +9,18 @@ feature 'tracks' do
     end
   end
 
-  context 'creating tracks' do
-  	scenario 'liking a track' do
-  		visit '/tracks'
-  		expect(page).to have_content 'track'
-  		click_link 'like'
-  		expect(page).to have_content 'liked'
-  	end
+  context 'testing database creates tracks' do
+    scenario 'viewing tracks that been added' do
+      @track = Track.create()
+      visit '/tracks'
+      expect(page).to have_content{@track.id}
+    end
+
+  	# scenario 'liking a track' do
+  	# 	visit '/tracks'
+  	# 	expect(page).to have_content 'track'
+  	# 	click_link 'like'
+  	# 	expect(page).to have_content 'liked'
+  	# end
   end
 end

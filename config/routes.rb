@@ -30,7 +30,9 @@ Rails.application.routes.draw do
   #     end
   #   end
 
-  resources :tracks
+  resources :tracks do 
+
+  end
 
   # Example resource route with sub-resources:
   #   resources :products do

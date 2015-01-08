@@ -30,7 +30,15 @@
    </div>
 
    <ul>
-     <li>track</li>
+     <li>
+     <% if @tracks.any? %>
+      <%@tracks.each do |track|%>
+      <p> <%= track.id %></p> 
+      <%end %>
+    <%else %>
+      No saved tracks
+    <%end %>
+     </li>
      <a href='#' name='like'>like</a>
    </ul>
    
