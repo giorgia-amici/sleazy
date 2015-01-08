@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div class="signing-container">
         <div class="signing">
             <div id="out">
                 <% if user_signed_in? %>
@@ -25,8 +26,9 @@
                     <%=link_to 'up', new_user_registration_path %>
                 </div>
         </div>
-
+        </div>
     <% end %>
+
 
 
 
