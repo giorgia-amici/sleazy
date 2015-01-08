@@ -1,10 +1,11 @@
- <html ng-app="app">
+ <html lang="en" ng-app="app">
    <head> 
    <script src="//connect.soundcloud.com/sdk.js" ></script>
    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
    <title> sleazy sounds </title>
    </head>
-   <body ng-controller="test">
+   <body ng-controller="search">
+   <center>
 
    <header>
    
@@ -19,18 +20,21 @@
           <form id="searchingForm" ng-submit="activateSearch()">
           <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearchTemp" />
           <input id="search_submit" value="Rechercher" type="submit">
-            <ul id="wrapper" ng-repeat="song in list" />
+            <div id="wrapper" ng-repeat="song in list" >
 
-            <div class="container-2">
-              <li>
-                <a ng-click="playSound()">{{song.title}}</a>
-             </li>
-            </div>
+            <div>
+            <img ng-src="{{song.artwork_url}}" width="450" height="450">
+            <a ng-href="{{song.permalink_url}}">{{song.title}}</a>
+            <img ng-src="{{song.waveform_url}}">
+           </div>
+            
            </ul>
           </form>  
         </div>
       </div>
- 
+		<!-- <img ng-src="{{song.artwork_url}}"> -->
+  </div>
+    </center>
   </body>
 
 </html>
