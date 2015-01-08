@@ -44,10 +44,9 @@ angular.module('app').controller('search', function($scope, $http){
 // 		}
 
 
-	$scope.test = function(song){
+	$scope.playStopSong = function(song){
 		SC.stream("/tracks/" + song.id, function(sound){
 			if(song.playing === "true"){
-			// sound.stop(song)
 				soundManager.stopAll();
 			 song.playing = "false"
 			 console.log(song.playing)
