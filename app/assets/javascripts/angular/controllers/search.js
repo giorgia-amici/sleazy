@@ -1,4 +1,6 @@
-angular.module('app').controller('test', function($scope, $http){
+console.log("")
+
+angular.module('app').controller('search', function($scope, $http){
 
 	SC.initialize({
 		client_id: 'd1833a816c234ee6c77a76e948e9dbd1'
@@ -23,9 +25,5 @@ angular.module('app').controller('test', function($scope, $http){
 		 			// SC.oEmbed(firstTrack, document.getElementById('wrapper'));
 		 		})
  }
-
-
-
-
 
 });
