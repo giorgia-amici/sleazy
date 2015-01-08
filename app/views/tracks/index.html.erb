@@ -8,7 +8,6 @@
    <center>
 
    <header>
-   
    <h2>Sleazy <%= image_tag "sleazy.png" %> Sounds </h2>
    </header>
      <!--  <form id="searchingForm" ng-submit="activateSearch()">
@@ -24,9 +23,12 @@
 </div>
   <div id="wrapper" ng-repeat="song in list">
     <div>
+    <a ng-click="test(song)">
+
     <img ng-src="{{song.artwork_url}}" width="450" height="450">
-  	<a ng-href="{{song.permalink_url}}">{{song.title}}</a>
-  	<img ng-src="{{song.waveform_url}}">
+    <a ng-href="{{song.permalink_url}}">{{song.title}}</a>
+    </a>
+    <!-- <button id="stop" ng-click="stopSound(song)">Stop<botton> -->
    </div>
 		<!-- <img ng-src="{{song.artwork_url}}"> -->
   </div>
