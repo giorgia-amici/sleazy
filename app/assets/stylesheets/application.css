@@ -143,19 +143,65 @@ input, input[placeholder]{
   opacity: 0.8;
 }
 
-#wrapper {
-  text-align: center;
-  list-style-type: none;
-  padding: 0;
-
+.wrap-container {
+  border: 3px solid white;
+  margin-left: 5000px;
+  margin-right: auto;
 }
 
-.container-2 {
-  margin-top: 85px;
+.artwork {
+  float: left;
+  margin-top: 40px;
+  opacity: 0.85;
+  margin: 5px;
+  background-image: url("crude-oil.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }
 
-li {
-  font-size: 3px;
+.testimg {
+  float: left;
+  margin: 10px;
+}
+
+.testimg:hover{
+  margin-left: 45%;
+  margin-right: 45%;
+  height: 250px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+footer {
+  margin-top: 80%;
+  margin-bottom: 0;
+  width: 100%;
+  background-color: #27FB6B;
+  position: static;
+}
+
+.options {
+  clear: both;
+  color: black;
+
+}
+#add {
+  font-size: 50px;
+  float: left;
+  margin-left: 30%;
+}
+
+#pause {
+  font-size: 50px;
+  float: right;
+  margin-right: 30%;
 }
 
 

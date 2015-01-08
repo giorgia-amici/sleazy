@@ -11,30 +11,36 @@
    
    <h2>Sleazy <%= image_tag "sleazy.png", :class => "logo" %> Sounds </h2>
    </header>
-     <!--  <form id="searchingForm" ng-submit="activateSearch()">
-      <input type="text" class="search" ng-model="toSearch">
-      </form> -->
+
         
       <div id="wrap-container">
         <div id="wrap">
           <form id="searchingForm" ng-submit="activateSearch()">
           <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearchTemp" />
           <input id="search_submit" value="Rechercher" type="submit">
-            <div id="wrapper" ng-repeat="song in list" >
-
-            <div>
-            <img ng-src="{{song.artwork_url}}" width="450" height="450">
-            <a ng-href="{{song.permalink_url}}">{{song.title}}</a>
-            <img ng-src="{{song.waveform_url}}">
-           </div>
-            
-           </ul>
-          </form>  
+          </form> 
+          </div>
         </div>
-      </div>
-		<!-- <img ng-src="{{song.artwork_url}}"> -->
-  </div>
-    </center>
+
+          <ul id="wrapper" ng-repeat="song in list" >
+            <a ng-click="playSound()">
+              <img class="artwork" ng-src="{{song.artwork_url}}" />
+
+            </a>
+          </ul> 
+
+        <a class"test">  <%= image_tag "sleazy.png", :class => "testimg" %> 
+        </a>
+
+    <footer>
+      <div class="options">
+          <a ng-click="" id="add">+</a>
+          <a ng-click="" id="pause">pause</a>
+        </div>
+    </footer>
+     </center>
+
+  
   </body>
 
 </html>
