@@ -22,12 +22,14 @@
         </form>
         
 </div>
-  <ul id="wrapper" ng-repeat="song in list">
-    <li>
-  <a ng-href="{{song.permalink_url}}">{{song.title}}</a>
-   </li>
-
-  </ul>
+  <div id="wrapper" ng-repeat="song in list">
+    <div>
+    <img ng-src="{{song.artwork_url}}" width="450" height="450">
+  	<a ng-href="{{song.permalink_url}}">{{song.title}}</a>
+  	<img ng-src="{{song.waveform_url}}">
+   </div>
+		<!-- <img ng-src="{{song.artwork_url}}"> -->
+  </div>
     </center>
   </body>
 
