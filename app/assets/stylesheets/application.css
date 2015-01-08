@@ -90,6 +90,9 @@ input[type="submit"] {
   transition: opacity .4s ease;
   display: none;
 }
+input, input[placeholder]{
+    text-align:center;
+}
 
 .new_user {
   font-family:'Source Code Pro', serif;
@@ -115,10 +118,7 @@ input[type="submit"] {
   margin-left: 40%;
 
 }
-input, input[placeholder]{
-    text-align:center;
 
-}
 
 #up {
  float: right;
@@ -127,13 +127,16 @@ input, input[placeholder]{
 
 #in:hover {
   opacity: 0.5;
+  text-decoration: none;
 }
 
 #up:hover {
   opacity: 0.5;
+  text-decoration: none;
 }
 #out:hover {
   opacity: 0.5;
+  text-decoration: none;
 }
 
 .search {
@@ -180,28 +183,44 @@ input, input[placeholder]{
 }
 
 footer {
-  margin-top: 80%;
-  margin-bottom: 0;
+  position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;
   width: 100%;
-  background-color: #27FB6B;
-  position: static;
+  background-color: #C1EEFF;
 }
 
 .options {
   clear: both;
-  color: black;
 
 }
+
 #add {
-  font-size: 50px;
+  font-family: 'Source Code Pro', serif;
+  color: black;
+  font-size: 35px;
   float: left;
   margin-left: 30%;
 }
 
 #pause {
-  font-size: 50px;
+  font-family: 'Source Code Pro', serif;
+  color: black;
+  font-size: 35px;
   float: right;
   margin-right: 30%;
 }
 
+#pause:hover{
+  opacity: 0.5;
+  text-decoration: none;
+  color: green;
+}
+
+#add:hover{
+  opacity: 0.5;
+  text-decoration: none;
+  color: green;
+}
 
