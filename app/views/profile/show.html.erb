@@ -12,5 +12,20 @@
   <% end %>
 <% end %>
 
+
+<footer>
+<center>
+      <div class="options">
+        <a ng-click="stopSong()" id="pause"><strong>&#9616;&#9616;</strong></a>
+        <div id="back">
+        <% if user_signed_in? %>
+    
+          <%= link_to "￩", tracks_path %>
+        <% end %>
+        </div>
+      </div>
+      </center>
+    </footer>
+
 </body>
 </html>

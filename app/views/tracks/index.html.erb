@@ -8,9 +8,11 @@
   <center>
 
   <header>
+  
   <h2>Sleazy <%= image_tag "sleazy.png", :class => "logo" %> Sounds </h2>
   </header>
 
+        
       <div id="wrap-container">
         <div id="wrap">
           <form id="searchingForm" ng-submit="activateSearch()">
@@ -19,26 +21,32 @@
           </form> 
           </div>
         </div>
-          <ul id="wrapper" ng-repeat="song in list" >
-             <a ng-click="playStopSong(song)" class="avatar">
-              <img class="artwork" ng-src="{{song.artwork_url}}" />
-  <button ng-click="submit(song)">Save</button>
-            </ul> 
+          <ul class="wrapper" ng-repeat="song in list" >
 
+            <a ng-click="playStopSong(song)" class="avatar">
+              <img class="artwork" ng-src="{{song.artwork_url}}" />
+              <% if user_signed_in? %>
+  <a ng-click="submit(song)" id="addsong" class="plus">+</a>
+            <% end %>
+            </ul> 
             </a>
           
           </ul> 
 
         </a>
     <footer>
-      <p id="song-title"> {{thisTitle}} </p>
+    <p id="song-title"> {{thisTitle}} </p>
       <div class="options">
-        <a ng-click="" id="add">+</a>
-
-        <a ng-click="stopSong()" id="pause"><strong>&#9616;&#9616;</strong>pause</a>
-
+        <a ng-click="stopSong()" id="pause"><strong>&#9616;&#9616;</strong></a>
+        
       </div>
     </footer>
+
+
+
+
+
+
     </center>
 
   

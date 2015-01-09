@@ -1,14 +1,16 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Sleazy</title>
+    <title>sleazy ƨounds</title>
     <%=stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track'=> true %>
         <%=javascript_include_tag 'application', 'data-turbolinks-track'=> true %>
             <%=csrf_meta_tags %>
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
                 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+                <%= favicon_link_tag 'favicon.ico' %>
 </head>
 
 <body>
@@ -18,11 +20,10 @@
                 <% if user_signed_in? %>
                 
                     <%=link_to 'out', destroy_user_session_path, method: :delete %>
-                    
+                  
+                    <%= link_to "≡", profile_path(current_user.id)%>
+      
                     </div>
-            <div id="me">
-                <%= link_to "me", profile_path(current_user.id)%>
-            </div> 
             <% else %>
     
                 <div id="in">
@@ -30,14 +31,15 @@
                 </div>
                 <div id="up">
                     <%=link_to 'up', new_user_registration_path %>
-            </div>
+                 </div>
         </div>
         </div>
     <% end %>
- 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
 
+       <p class="notice">
+            <%=notice %>
+        </p>
+    
         <%=yield %>
 
 </body>

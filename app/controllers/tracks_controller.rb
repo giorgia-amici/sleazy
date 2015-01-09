@@ -29,5 +29,4 @@ class TracksController < ApplicationController
     flash[:notice] = 'Track removed'
     redirect_to '/tracks'
   end
-
 end
