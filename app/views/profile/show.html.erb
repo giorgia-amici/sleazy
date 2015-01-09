@@ -4,6 +4,7 @@
 
 <% if @tracks %>
   <% @tracks.each do |track| %>
-    <li>track id= <%= track %> </li>
+    <li>track id= <%= track %></li>
+		<%= link_to "Delete", track_path(track), method: :delete %>
   <% end %>
 <% end %>
