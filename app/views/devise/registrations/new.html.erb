@@ -2,12 +2,14 @@
 <div class="devisetitle">
   <h2 id="up">up</h2>
 </div>
-
+<br />
+<br />
+<br />
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-  <div class="field">
+  
+<div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
@@ -25,9 +27,9 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="actions">
+  <submit class="actions">
     <%= f.submit "Sign up" %>
-  </div>
+  </submit>
 </center>
 <% end %>
 

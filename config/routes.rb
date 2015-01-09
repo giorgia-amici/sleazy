@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  resources :profile
 
   root to: "tracks#index"
 
@@ -35,8 +36,6 @@ Rails.application.routes.draw do
   resources :tracks do 
 
   end
-
-  resources :profile
 
   # Example resource route with sub-resources:
   #   resources :products do
