@@ -40,15 +40,15 @@ angular.module('app').controller('search', function($scope, $http){
 	}
 	
 		$scope.test = {
-			object: 'jsonObject'
+			object: 'object'
 		}
 
-	$scope.submit = function(){
-		$scope.test = {object: $scope.object}
+	$scope.submit = function(song){
+		$scope.test = {object: song.id}
 		var toSubmit = $scope.test
 		$http.post('/tracks', toSubmit)
 		.success(function(response) {
-			console.log(response)
+			
 		});
 	}
 

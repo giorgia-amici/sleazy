@@ -22,22 +22,31 @@
           </div>
         </div>
           <ul id="wrapper" ng-repeat="song in list" >
-              <a ng-click="playStopSong(song)">
+             <!--  <a ng-click="playStopSong(song)">
               <img class="artwork" ng-src="{{song.artwork_url}}"/>
             </a>     
-          </ul>
-        <a class"test">  <%= image_tag "sleazy.png", :class => "testimg" %> 
+          </ul> -->
+             <a ng-click="playStopSong(song)" class="avatar">
+              <img class="artwork" ng-src="{{song.artwork_url}}" />
+  <button ng-click="submit(song)">Save</button>
+            </ul> 
+<!--         <a class"test">  <%= image_tag "sleazy.png", :class => "testimg" %> 
         </a>
-        <form id="addPlaylist" ng-submit="submit()">
-        <label for="songToSave"</label>
-        <input id="songToSave" type="text" ng-model="object" placeholder="Hello I am here">
-        <button type="submit">Save</button>
-        </form>
+ -->
+            </a>
+          
+          </ul> 
+
+        </a>
     <footer>
+      <p id="song-title"> song title </p>
       <div class="options">
-          <a ng-click="" id="add">+</a>
-          <a ng-click="" id="pause">pause</a>
-        </div>
+        <a ng-click="" id="add">+</a>
+        <a ng-click="" id="pause"><strong>&#9616;&#9616;</strong>pause</a>
+        <% if user_signed_in? %>
+          <%= link_to "Profile", profile_path(current_user.id)%>
+        <% end %>
+      </div>
     </footer>
     </center>
 
