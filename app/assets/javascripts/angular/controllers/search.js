@@ -34,6 +34,8 @@ angular.module('app').controller('search', function($scope, $http){
 			}
 		 	else{
 			  sound.play(song)
+				$scope.thisTitle = song.title
+				console.log($scope.thisTitle)
 				song.playing = "true"
 				// console.log(song.id)
 			}
