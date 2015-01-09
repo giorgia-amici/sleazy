@@ -10,8 +10,6 @@ Rails.application.routes.draw do
 
   root to: "tracks#index"
 
-  match "/track" => "tracks#index", via: :options
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

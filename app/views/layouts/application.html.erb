@@ -21,7 +21,7 @@
                     
                     </div>
             <div id="me">
-                <%= link_to 'me' %>
+                <%= link_to "me", profile_path(current_user.id)%>
             </div> 
             <% else %>
     
@@ -30,23 +30,15 @@
                 </div>
                 <div id="up">
                     <%=link_to 'up', new_user_registration_path %>
-       
             </div>
         </div>
         </div>
     <% end %>
 
+        <p class="notice"><%=notice %></p>
 
+        <p class="alert"><%=alert %></p>
 
-
-
-
-     <!--    <p class="notice">
-            <%=notice %>
-        </p>
-        <p class="alert">
-            <%=alert %>
-        </p> -->
         <%=yield %>
 
 </body>

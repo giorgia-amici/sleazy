@@ -12,7 +12,6 @@
   <h2>Sleazy <%= image_tag "sleazy.png", :class => "logo" %> Sounds </h2>
   </header>
 
-        
       <div id="wrap-container">
         <div id="wrap">
           <form id="searchingForm" ng-submit="activateSearch()">
@@ -26,9 +25,7 @@
               <img class="artwork" ng-src="{{song.artwork_url}}" />
   <button ng-click="submit(song)">Save</button>
             </ul> 
-<!--         <a class"test">  <%= image_tag "sleazy.png", :class => "testimg" %> 
-        </a>
- -->
+
             </a>
           
           </ul> 
@@ -38,10 +35,9 @@
       <p id="song-title"> {{list[0].title}} </p>
       <div class="options">
         <a ng-click="" id="add">+</a>
+
         <a ng-click="stopSong()" id="pause"><strong>&#9616;&#9616;</strong>pause</a>
-        <% if user_signed_in? %>
-          <%= link_to "Profile", profile_path(current_user.id)%>
-        <% end %>
+
       </div>
     </footer>
     </center>

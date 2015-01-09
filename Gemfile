@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use postgresql as the database for Active Record
@@ -47,7 +46,7 @@ end
 group :test do 
 	gem 'rspec-rails'
 	gem 'capybara'
-  gem 'poltergeist'
+  gem 'capybara-webkit'
   gem 'database_cleaner'
 end
 
