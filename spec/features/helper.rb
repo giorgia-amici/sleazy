@@ -8,7 +8,7 @@ def sign_up
   # element.native.send_keys(:return)
   # find('.actions').native.send_keys(:return)
   # input = find('#user_password_confirmation')
-	input = find(:xpath,'//body[contains(@id,"user_password_confirmation") and contains(text(),"testtest")]') 
+	 input = find(:xpath,'//body[contains(@id,"user_password_confirmation") and contains(text(),"testtest")]') 
 	input.set('testtest')
 	keypress_on(input, :enter)
 end
