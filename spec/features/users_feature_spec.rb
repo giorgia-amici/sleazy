@@ -20,7 +20,13 @@ feature 'user' do
 	context 'user signed in on the homepage' do
 
 		scenario 'should see sign out link', js: true do
-			sign_up
+			visit '/'
+		  click_link 'up'
+		  fill_in 'Email', with: 'test@example.com'
+		  fill_in 'Password', with: 'testtest'
+		  fill_in 'Password confirmation', with:'testtest\n'
+		  # element = find('#user_password_confirmation')
+		  # element.native.send_key(:Enter)
 			expect(current_path).to eq '/tracks'
 		end
 

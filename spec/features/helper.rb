@@ -4,7 +4,7 @@ def sign_up
   fill_in 'Email', with: 'test@example.com'
   fill_in 'Password', with: 'testtest'
   fill_in 'Password confirmation', with:'testtest'
-  element = find(Sign up)
-  element.native.send_keys(:return)
+  element = find('#user_password_confirmation')
+  element.native.send_keys(:Enter)
   # find('.actions>submit').native.send_keys(:return)
 end

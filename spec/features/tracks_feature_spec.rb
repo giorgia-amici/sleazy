@@ -4,7 +4,7 @@ feature 'tracks' do
   context 'no tunes have been added' do
     scenario 'should ask what track you want' do
       visit '/tracks'
-      expect(page).to have_content 'Sign in Sign up'
+      expect(page).to have_content 'in up'
       expect(page).not_to have_link 'track'
     end
   end
@@ -23,8 +23,8 @@ feature 'tracks' do
 
     scenario 'adding track to database' do
       visit '/tracks'
-      expect(page).to have_link 'Add'
-      click_link 'Add'
+      expect(page).to have_link '+'
+      click_link '+'
       expect(page).to have_content 'Added'
       expect(current_path).to eq('/tracks')
     end
