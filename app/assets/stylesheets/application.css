@@ -14,8 +14,11 @@
  *= require_self
  */
 
+
+
 header {
-  margin-top: 50px;
+  padding: 30px;
+  margin-top: 20px;
   text-align: center;
   position: relative;
   font-family: 'Source Code Pro', serif;
@@ -109,19 +112,34 @@ input, input[placeholder]{
   font-size: 25px;
 }
 
+.deviselogo {
+  height: 150px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  -ms-transition: -ms-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;  
+}
+.deviselogo:hover {
+  transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+}
 
 .devisetitle {
+  margin-top: 7px;
   font-family: 'Source Code Pro', serif;
   text-align: center;
   position: center;
   clear: both;
 }
 
+
 .signing-container {
   padding:0;
   margin-top:0;
   width: 100%;
-  height: 70px;
+  height: 85px;
   background-color: #E5C687;
 }
 .signing {
@@ -137,6 +155,14 @@ input, input[placeholder]{
 #up {
  float: right;
  margin-right: 40%;
+}
+
+#me {
+  margin-left: 2px;
+}
+
+#out {
+  margin-left: 2px;
 }
 
 #in:hover {
@@ -180,7 +206,7 @@ input, input[placeholder]{
   height: 200px;
 }
 
-/*.artwork:active {
+/*.artwork:hover {
   margin-left: 45%;
   margin-right: 45%;
   height: 250px;
@@ -188,8 +214,8 @@ input, input[placeholder]{
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-*/
+}*/
+
 .testimg {
   float: left;
   margin: 10px;
@@ -207,11 +233,19 @@ input, input[placeholder]{
 
 footer {
   position:fixed;
-  height:100px;
+  height:150px;
    bottom:0px;
    width:100%;
    margin-bottom: 0px;
   background-color: #9DDBAD;
+}
+
+#song-title {
+  font-family: 'Source Code Pro', serif;
+  text-decoration: none;
+  font-size: 30px;
+  margin-top: 5px;
+  text-align: center;
 }
 
 .options {

@@ -16,15 +16,22 @@
         <div class="signing">
             <div id="out">
                 <% if user_signed_in? %>
+                
                     <%=link_to 'out', destroy_user_session_path, method: :delete %>
-            </div>
+                    
+                    </div>
+            <div id="me">
+                <%= link_to 'me' %>
+            </div> 
             <% else %>
+    
                 <div id="in">
                     <%=link_to 'in', new_user_session_path %>
                 </div>
                 <div id="up">
                     <%=link_to 'up', new_user_registration_path %>
-                </div>
+       
+            </div>
         </div>
         </div>
     <% end %>
@@ -32,12 +39,14 @@
 
 
 
-        <p class="notice">
+
+
+     <!--    <p class="notice">
             <%=notice %>
         </p>
         <p class="alert">
             <%=alert %>
-        </p>
+        </p> -->
         <%=yield %>
 
 </body>
