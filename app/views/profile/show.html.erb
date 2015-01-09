@@ -1,9 +1,15 @@
-<%= @user.first_name %><br>
-<%= @user.last_name %><br>
-<%= @user.profile_name %><br>
+<html lang-"en" ng-app="app">
+<head>
 
+</head>
+<body>
 <% if @tracks %>
   <% @tracks.each do |track| %>
-    <li>track id= <%= track %> </li>
+    <li> 
+    <a href="<%= track.object %>"> <%=track.title %> </a>
+    </li>
   <% end %>
 <% end %>
+
+</body>
+</html>

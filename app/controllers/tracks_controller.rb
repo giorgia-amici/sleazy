@@ -3,7 +3,7 @@ class TracksController < ApplicationController
 	skip_before_filter  :verify_authenticity_token
 
   def permit_params
-  	params.require(:track).permit(:object)
+  	params.require(:track).permit(:object, :title)
   end
 
   def index

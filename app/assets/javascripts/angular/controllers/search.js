@@ -35,21 +35,22 @@ angular.module('app').controller('search', function($scope, $http){
 		 	else{
 			  sound.play(song)
 				song.playing = "true"
+				// console.log(song.id)
 			}
 		})
 	}
 	
-		$scope.test = {
-			object: 'object'
-		}
+		$scope.test = {}
+		
 
 	$scope.submit = function(song){
-		$scope.test = {object: song.id}
+		$scope.test = {object: song.permalink_url, title: song.title }
 		var toSubmit = $scope.test
 		$http.post('/tracks', toSubmit)
 		.success(function(response) {
 
 		});
+		console.log(toSubmit)
 	}
 
 	$scope.stopSong = function(){

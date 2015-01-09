@@ -22,10 +22,6 @@
           </div>
         </div>
           <ul id="wrapper" ng-repeat="song in list" >
-             <!--  <a ng-click="playStopSong(song)">
-              <img class="artwork" ng-src="{{song.artwork_url}}"/>
-            </a>     
-          </ul> -->
              <a ng-click="playStopSong(song)" class="avatar">
               <img class="artwork" ng-src="{{song.artwork_url}}" />
   <button ng-click="submit(song)">Save</button>
@@ -39,7 +35,7 @@
 
         </a>
     <footer>
-      <p id="song-title"> song title </p>
+      <p id="song-title"> {{list[0].title}} </p>
       <div class="options">
         <a ng-click="" id="add">+</a>
         <a ng-click="stopSong()" id="pause"><strong>&#9616;&#9616;</strong>pause</a>
