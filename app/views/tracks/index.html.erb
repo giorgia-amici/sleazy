@@ -21,22 +21,18 @@
           </form> 
           </div>
         </div>
-
           <ul id="wrapper" ng-repeat="song in list" >
-            <a ng-click="playStopSong(song)">
-              <img class="artwork" ng-src="{{song.artwork_url}}" />
-            </a>
-          </ul> 
-
+              <a ng-click="playStopSong(song)">
+              <img class="artwork" ng-src="{{song.artwork_url}}"/>
+            </a>     
+          </ul>
         <a class"test">  <%= image_tag "sleazy.png", :class => "testimg" %> 
         </a>
-
         <form id="addPlaylist" ng-submit="submit()">
         <label for="songToSave"</label>
         <input id="songToSave" type="text" ng-model="object" placeholder="Hello I am here">
         <button type="submit">Save</button>
         </form>
-
     <footer>
       <div class="options">
           <a ng-click="" id="add">+</a>

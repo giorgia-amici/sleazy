@@ -21,43 +21,37 @@ angular.module('app').controller('search', function($scope, $http){
 					 			$scope.list.push(song)
 				 		})
 				})
+				.error(function(){
+					console.log(error.status)
+				})
 	}
 
 	$scope.playStopSong = function(song){
 		SC.stream("/tracks/" + song.id, function(sound){
 			if(song.playing === "true"){
 				soundManager.stopAll();
-			 song.playing = "false"
-			 console.log(song.playing)
+			 	song.playing = "false"
 			}
 		 	else{
-		  sound.play(song)
-			song.playing = "true"
-			console.log(song.playing)
+			  sound.play(song)
+				song.playing = "true"
 			}
 		})
 	}
-
-	$scope.songsToHide = function(){
-		$scope.list.forEach(function(song){
-			if(song.playing==='false')
-				return song
-		})
-	}
-
+	
 		$scope.test = {
 			object: 'jsonObject'
 		}
 
 	$scope.submit = function(){
 		$scope.test = {object: $scope.object}
-		console.log($scope.test)
 		var toSubmit = $scope.test
 		$http.post('/tracks', toSubmit)
 		.success(function(response) {
 			console.log(response)
 		});
 	}
+
 
 
 
