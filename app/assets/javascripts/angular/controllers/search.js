@@ -21,28 +21,7 @@ angular.module('app').controller('search', function($scope, $http){
 					 			$scope.list.push(song)
 				 		})
 				})
-		// SC.oEmbed(firstTrack, document.getElementById('wrapper'));
-		 		// })
 	}
-	
-//  $scope.playSound = function(song) {
-// 	  	console.log(song)
-//  			SC.stream("/tracks/" + song.id, function(sound){
-//  			sound.play(song)
-// 			song.playing = "true"
-// 			console.log(song.playing)
-//   	})
-//  		}
-	
-
-// $scope.stopSound = function(song) {
-// 			 SC.stream("/tracks/" + song.id, function(sound){
-// 			 sound.pause(song)
-// 			 song.playing = "false"
-// 			 console.log(song.playing)
-// 			})
-// 		}
-
 
 	$scope.playStopSong = function(song){
 		SC.stream("/tracks/" + song.id, function(sound){
@@ -58,6 +37,26 @@ angular.module('app').controller('search', function($scope, $http){
 			}
 		})
 	}
+
+	$scope.songsToHide = function(){
+		$scope.list.forEach(function(song){
+			if(song.playing==='false')
+				return song
+		})
+	}
+
+		$scope.test = {
+			object: 'object'
+		}
+
+	$scope.submit = function(song){
+		$scope.test = {object: song.id}
+		var toSubmit = $scope.test
+		$http.post('/tracks', toSubmit)
+		.success(function(response) {
+		});
+	}
+
 
 
  });

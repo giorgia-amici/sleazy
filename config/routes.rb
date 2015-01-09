@@ -6,8 +6,11 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  resources :profile
 
   root to: "tracks#index"
+
+  match "/track" => "tracks#index", via: :options
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -30,7 +33,9 @@ Rails.application.routes.draw do
   #     end
   #   end
 
-  resources :tracks
+  resources :tracks do 
+
+  end
 
   # Example resource route with sub-resources:
   #   resources :products do
