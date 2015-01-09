@@ -1,55 +1,36 @@
 <html lang="en" ng-app="app">
   <head> 
-  <script src="//connect.soundcloud.com/sdk.js" ></script>
-  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
-  <title> sleazy sounds </title>
+    <script src="//connect.soundcloud.com/sdk.js" ></script>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
+    <title> sleazy sounds </title>
   </head>
   <body ng-controller="search">
-  <center>
-
-  <header>
-  
-  <h2>Sleazy <%= image_tag "sleazy.png", :class => "logo" %> Sounds </h2>
-  </header>
-
-        
+    <center>
+    <header>    
+      <h2>Sleazy <%= image_tag "sleazy.png", :class => "logo" %> Sounds </h2>
+    </header>          
       <div id="wrap-container">
         <div id="wrap">
           <form id="searchingForm" ng-submit="activateSearch()">
-          <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearchTemp" />
-          <input id="search_submit" value="Rechercher" type="submit">
+            <input class="search" type="text" placeholder="what track u wnt?" ng-model="toSearchTemp" />
+            <input id="search_submit" value="Rechercher" type="submit">
           </form> 
-          </div>
         </div>
-          <ul class="wrapper" ng-repeat="song in list" >
-
-            <a ng-click="playStopSong(song)" class="avatar">
-              <img class="artwork" ng-src="{{song.artwork_url}}" />
-              <% if user_signed_in? %>
-  <a ng-click="submit(song)" id="addsong" class="plus">+</a>
-            <% end %>
-            </ul> 
-            </a>
-          
-          </ul> 
-
-        </a>
-    <footer>
-    <p id="song-title"> {{thisTitle}} </p>
-      <div class="options">
-        <a ng-click="stopSong()" id="pause"><strong>&#9616;&#9616;</strong></a>
-        
       </div>
-    </footer>
+        <ul class="wrapper" ng-repeat="song in list" >
+          <a ng-click="playStopSong(song)" class="avatar">
+          <img class="artwork" ng-src="{{song.artwork_url}}" />
+          <% if user_signed_in? %>
+            <a ng-click="submit(song)" id="addsong" class="plus">+</a>
+          <% end %>
+        </ul>     
+      <footer>
+        <p id="song-title"> {{thisTitle}} </p>
+        <div class="options">
+        <a ng-click="stopSong()" id="pause"><strong>&#9616;&#9616;</strong></a>  
+        </div>
+      </footer>
 
-
-
-
-
-
-    </center>
-
-  
+      </center>
   </body>
-
 </html>

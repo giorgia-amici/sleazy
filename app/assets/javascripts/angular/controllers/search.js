@@ -12,18 +12,18 @@ angular.module('app').controller('search', function($scope, $http){
 		$scope.toSearch = $scope.removeSpace($scope.toSearchTemp)
  		var songToSearch = $scope.toSearch
 		var searchSong = $http.get("http://api.soundcloud.com/tracks.json?client_id=d1833a816c234ee6c77a76e948e9dbd1&q=" + songToSearch + "&limit=55")
-		 		.success(function(songs){
-		 				$scope.songs = songs
-						$scope.list = []
-				 			songs.forEach(function(song){
-				 				song.playing = "false"
-					 			var track = song.permalink_url
-					 			$scope.list.push(song)
-				 		})
-				})
-				.error(function(){
-					console.log(error.status)
-				})
+ 		.success(function(songs){
+ 				$scope.songs = songs
+				$scope.list = []
+		 			songs.forEach(function(song){
+		 				song.playing = "false"
+			 			var track = song.permalink_url
+			 			$scope.list.push(song)
+		 		})
+		})
+		.error(function(){
+			console.log(error.status)
+		})
 	}
 
 	$scope.playStopSong = function(song){
@@ -42,8 +42,7 @@ angular.module('app').controller('search', function($scope, $http){
 		})
 	}
 	
-		$scope.test = {}
-		
+	$scope.test = {}	
 
 	$scope.submit = function(song){
 		$scope.test = {object: song.permalink_url, title: song.title }
@@ -56,11 +55,7 @@ angular.module('app').controller('search', function($scope, $http){
 	}
 
 	$scope.stopSong = function(){
-			soundManager.stopAll();
-			song.playing = "false"
+		soundManager.stopAll();
+		song.playing = "false"
 	}
-
-
-
-
- });
+});

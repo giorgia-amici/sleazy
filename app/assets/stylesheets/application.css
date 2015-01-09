@@ -210,18 +210,6 @@ margin-right: 40%;
 
 }
 
-
-
-/*.artwork:hover {
-  margin-left: 45%;
-  margin-right: 45%;
-  height: 250px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}*/
-
 .testimg {
   float: left;
   margin: 10px;
@@ -309,4 +297,11 @@ footer {
   opacity: 0.5;
   text-decoration: none;
   color: green;
+}
+
+.tracktitle {
+  margin-top: 60px;
+  list-style-type:none;
+  font-family: 'Source Code Pro', serif;
+
 }

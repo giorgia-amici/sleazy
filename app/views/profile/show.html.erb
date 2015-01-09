@@ -1,31 +1,28 @@
 <html lang-"en" ng-app="app">
 <head>
-
 </head>
 <body>
+<center>
 <% if @tracks %>
   <% @tracks.each do |track| %>
-    <li> 
-    <a href="<%= track.object %>"> <%=track.title %> </a>
+    <li class="tracktitle"> 
+    <a href="<%= track.object %>" > <%=track.title %> </a><br>
     <%= link_to "X", track_path(track), method: :delete %>
     </li>
   <% end %>
 <% end %>
-
-
+</center>
 <footer>
 <center>
       <div class="options">
         <a ng-click="stopSong()" id="pause"><strong>&#9616;&#9616;</strong></a>
-        <div id="back">
-        <% if user_signed_in? %>
-    
-          <%= link_to "￩", tracks_path %>
-        <% end %>
-        </div>
+	        <div id="back">
+	        <% if user_signed_in? %>
+	         	 <%= link_to "￩", tracks_path %>
+	        <% end %>
+	        </div>
       </div>
-      </center>
-    </footer>
-
+</center>
+</footer>
 </body>
 </html>
