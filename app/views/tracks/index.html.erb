@@ -42,7 +42,7 @@
       <p id="song-title"> song title </p>
       <div class="options">
         <a ng-click="" id="add">+</a>
-        <a ng-click="" id="pause"><strong>&#9616;&#9616;</strong>pause</a>
+        <a ng-click="stopSong()" id="pause"><strong>&#9616;&#9616;</strong>pause</a>
         <% if user_signed_in? %>
           <%= link_to "Profile", profile_path(current_user.id)%>
         <% end %>

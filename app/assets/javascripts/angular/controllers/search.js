@@ -48,8 +48,13 @@ angular.module('app').controller('search', function($scope, $http){
 		var toSubmit = $scope.test
 		$http.post('/tracks', toSubmit)
 		.success(function(response) {
-			
+
 		});
+	}
+
+	$scope.stopSong = function(){
+			soundManager.stopAll();
+			song.playing = "false"
 	}
 
 
