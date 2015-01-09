@@ -7,7 +7,7 @@
   <% @tracks.each do |track| %>
     <li> 
     <a href="<%= track.object %>"> <%=track.title %> </a>
-    <%= link_to "Delete", track_path(track), method: :delete %>
+    <%= link_to "X", track_path(track), method: :delete %>
     </li>
   <% end %>
 <% end %>
