@@ -1,7 +1,6 @@
 // describe('Testing search bar', function() {
 // 	beforeEach(module('app'));
 
-// 	var scope, ctrl;
 
 // 	beforeEach(inject(function($rootScope, $controller) {
 // 		scope = $rootScope.$new();
@@ -17,19 +16,40 @@
 
 // });
 
-describe('Testing search bar', function(){
-	var module;
-	beforeEach(function(){
-		module = angular.module("app", [])
+describe('does the module exist', function(){
 
-	});
+		beforeEach(module('app'));
 
-// beforeEach(module("app"));
+		var scope, ctrl;
 
-	it("should be registered", function(){
-		console.log("=======")
-		console.log( module)
-		console.log("=======")
-		expect(module).not.toEqual(null);
-	});
-});
+		beforeEach(inject(function($rootScope, $controller){
+			scope = $rootScope.$new();
+			ctrl = $controller('search', {$scope: scope});
+		}));
+
+		it("should be registered", function(){
+			expect(module).not.toEqual(null);
+		});
+
+	describe('search', function(){
+
+			it('is a controller', function(){
+				expect(ctrl).toBeDefined();
+				expect(scope).toBeDefined;
+			})
+
+			it('removes spaces after typing in the search bar', function(){
+				expect(scope.removeSpace).toBeDefined
+				var string = 'giorgia amici'
+				expect(scope.removeSpace(string)).toEqual('giorgiaamici')
+			})
+
+
+	
+})
+})
+
+
+
+
+
