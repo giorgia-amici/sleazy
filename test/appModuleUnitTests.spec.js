@@ -20,14 +20,17 @@ describe('does the module exist', function(){
 
 		beforeEach(module('app'));
 
+		var httpBackend;
+
 		var sc = "//connect.soundcloud.com/sdk.js" 
 
 
 		var scope, ctrl;
 
-		beforeEach(inject(function($rootScope, $controller){
+		beforeEach(inject(function($rootScope, $controller, _$httpBackend_){
 			scope = $rootScope.$new();
 			ctrl = $controller('search', {$scope: scope});
+			httpBackend = _$httpBackend_;
 		}));
 
 		it("should be registered", function(){
@@ -47,12 +50,17 @@ describe('does the module exist', function(){
 				expect(scope.removeSpace(string)).toEqual('giorgiaamici')
 			})
 
+
+		// it('Person example', function () {
+		//  expect(new Person('Ben')).to.have.property('name', 'Ben'); 
+		// });
+
 			it('searches for a song', function(){
 				expect(scope.activateSearch).not.toBeUndefined
 				var toSearchTemp = 'giorgia bella'
 				expect(scope.removeSpace(toSearchTemp)).toEqual('giorgiabella')
 				scope.songToSearch = scope.removeSpace(toSearchTemp)
-				console.log(scope.songToSearch)
+				// var searchSong = http.get("http://api.soundcloud.com/tracks.json?client_id=d1833a816c234ee6c77a76e948e9dbd1&q=" + songToSearch + "&limit=55")
 			})
 	
 })
