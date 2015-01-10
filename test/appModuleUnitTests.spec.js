@@ -20,6 +20,9 @@ describe('does the module exist', function(){
 
 		beforeEach(module('app'));
 
+		var sc = "//connect.soundcloud.com/sdk.js" 
+
+
 		var scope, ctrl;
 
 		beforeEach(inject(function($rootScope, $controller){
@@ -44,7 +47,13 @@ describe('does the module exist', function(){
 				expect(scope.removeSpace(string)).toEqual('giorgiaamici')
 			})
 
-
+			it('searches for a song', function(){
+				expect(scope.activateSearch).not.toBeUndefined
+				var toSearchTemp = 'giorgia bella'
+				expect(scope.removeSpace(toSearchTemp)).toEqual('giorgiabella')
+				scope.songToSearch = scope.removeSpace(toSearchTemp)
+				console.log(scope.songToSearch)
+			})
 	
 })
 })
