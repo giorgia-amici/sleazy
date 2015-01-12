@@ -3,9 +3,6 @@ require_relative './helper.rb'
 
 feature 'user' do 
 
-
-
-
 	context 'user not signed in and on the home page' do
 
 		scenario 'should see sign in and sign up link' do
@@ -23,11 +20,7 @@ feature 'user' do
 	context 'user signed in on the homepage' do
 
 		scenario 'should see sign out link', :js => true do
-			visit '/'
-		  click_link 'up'
-		  fill_in 'Email', with: 'test@example.com'
-		  fill_in 'Password', with: 'testtest'
-		  fill_in 'Password confirmation', with:'testtest'
+			sign_up
 		  keypress = "document.getElementById('new_user').submit();"
 		  page.driver.browser.execute_script(keypress)
 			expect(current_path).to eq '/'
@@ -35,11 +28,7 @@ feature 'user' do
 		end
 
 		scenario 'should not see a sign in and sign up link', :js => true do
-			visit '/'
-		  click_link 'up'
-		  fill_in 'Email', with: 'test@example.com'
-		  fill_in 'Password', with: 'testtest'
-		  fill_in 'Password confirmation', with:'testtest'
+			sign_up
 		  keypress = "document.getElementById('new_user').submit();"
 		  page.driver.browser.execute_script(keypress)
 			expect(page).not_to have_link 'in'

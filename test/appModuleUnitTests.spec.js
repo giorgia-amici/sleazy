@@ -5,7 +5,7 @@ describe('does the module exist', function(){
 		var $httpBackend;
 
 		var sc = "//connect.soundcloud.com/sdk.js" 
-		var scGet = "http://api.soundcloud.com/tracks.json?client_id=d1833a816c234ee6c77a76e948e9dbd1&q="
+		var scGet = "http://api.bfrhusbevgjyfut.com/tracks.json?client_id=d1833a816c234ee6c77a76e948e9dbd1&q="
 		var limit = "&limit=55"
 
 
@@ -34,13 +34,19 @@ describe('does the module exist', function(){
 				expect(scope.removeSpace(string)).toEqual('giorgiahello')
 			})
 
+					//    afterEach(function() {
+		   //   $httpBackend.verifyNoOutstandingExpectation();
+		   //   $httpBackend.verifyNoOutstandingRequest();
+		   // });
+
 			it('searches for a song', function(){
 				expect(scope.activateSearch).not.toBeUndefined
 				var toSearchTemp = 'gior gia'
 				expect(scope.removeSpace(toSearchTemp)).toEqual('giorgia')
 				scope.songToSearch = scope.removeSpace(toSearchTemp)
-				// console.log(scGet + scope.songToSearch + limit)
-				$httpBackend.expectGET(scGet + scope.songToSearch + limit).respond({id:0, name: "iphone", assetTag:"a23456", owner:"qa", desc:"iOS4.3"})
+				console.log(scGet + scope.songToSearch + limit)
+				$httpBackend.expectGET(scGet + scope.songToSearch + limit).respond(200)
+
 
 
 			})

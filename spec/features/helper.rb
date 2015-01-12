@@ -1,12 +1,10 @@
-# def sign_up
-  # visit '/'
-  # click_link 'up'
-  # fill_in 'Email', with: 'test@example.com'
-  # fill_in 'Password', with: 'testtest'
-  # fill_in 'Password confirmation', with:'testtest'
-  # keypress = "var e = $.Event('keydown', { keyCode: 13 }); $('body').trigger(e);"
-  # page.driver.execute_script(keypress)
-# end
+def sign_up
+	visit '/'
+  click_link 'up'
+  fill_in 'Email', with: 'test@example.com'
+  fill_in 'Password', with: 'testtest'
+  fill_in 'Password confirmation', with:'testtest'
+end
 
 # keypress = "var e = $.Event('keydown', { keyCode: 13 }); $('body').trigger(e);"
 # page.driver.execute_script(keypress)
