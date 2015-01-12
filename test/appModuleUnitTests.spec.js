@@ -5,7 +5,7 @@ describe('does the module exist', function(){
 		var $httpBackend;
 
 		var sc = "//connect.soundcloud.com/sdk.js" 
-		var scGet = "http://api.bfrhusbevgjyfut.com/tracks.json?client_id=d1833a816c234ee6c77a76e948e9dbd1&q="
+		var scGet = "http://api.soundcloud.com/tracks.json?client_id=d1833a816c234ee6c77a76e948e9dbd1&q="
 		var limit = "&limit=55"
 
 
@@ -15,6 +15,7 @@ describe('does the module exist', function(){
 			scope = $rootScope.$new();
 			ctrl = $controller('search', {$scope: scope});
 			$httpBackend = _$httpBackend_;
+			authRequestHandler = $httpBackend.when('GET', '/auth.py')
 		}));
 
 		it("should be registered", function(){
@@ -34,10 +35,7 @@ describe('does the module exist', function(){
 				expect(scope.removeSpace(string)).toEqual('giorgiahello')
 			})
 
-					//    afterEach(function() {
-		   //   $httpBackend.verifyNoOutstandingExpectation();
-		   //   $httpBackend.verifyNoOutstandingRequest();
-		   // });
+            
 
 			it('searches for a song', function(){
 				expect(scope.activateSearch).not.toBeUndefined
@@ -46,6 +44,9 @@ describe('does the module exist', function(){
 				scope.songToSearch = scope.removeSpace(toSearchTemp)
 				console.log(scGet + scope.songToSearch + limit)
 				$httpBackend.expectGET(scGet + scope.songToSearch + limit).respond(200)
+				 // authRequestHandler.respond(404, '');
+				 // $httpBackend.expectGET('/auth.py');
+				 // $httpBackend.verifyNoOutstandingExpectation();
 
 
 
