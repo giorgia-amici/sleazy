@@ -25,26 +25,26 @@ feature 'user' do
 		scenario 'should see sign out link', :js => true do
 			visit '/'
 		  click_link 'up'
-		  puts current_path
 		  fill_in 'Email', with: 'test@example.com'
 		  fill_in 'Password', with: 'testtest'
 		  fill_in 'Password confirmation', with:'testtest'
-		  # expect(page).to hav/ e_button 'Sign up'
 		  keypress = "document.getElementById('new_user').submit();"
 		  page.driver.browser.execute_script(keypress)
-			# visit('/tracks')
 			expect(current_path).to eq '/'
-			# page.evaluate_script("var e = $.Event('keypress', { keyCode: 13 }); $('body').trigger(e)")
-			# save_and_open_page
-			# click_button 'Sign up'
 			expect(page).to have_content 'out'
 		end
 
-		# scenario 'should not see a sign in and sign up link' do
-		# 	visit '/'
-		# 	expect(page).not_to have_link 'in'
-		# 	expect(page).not_to have_link 'up'
-		# end
+		scenario 'should not see a sign in and sign up link', :js => true do
+			visit '/'
+		  click_link 'up'
+		  fill_in 'Email', with: 'test@example.com'
+		  fill_in 'Password', with: 'testtest'
+		  fill_in 'Password confirmation', with:'testtest'
+		  keypress = "document.getElementById('new_user').submit();"
+		  page.driver.browser.execute_script(keypress)
+			expect(page).not_to have_link 'in'
+			expect(page).not_to have_link 'up'  
+		end
 	end
 
 
