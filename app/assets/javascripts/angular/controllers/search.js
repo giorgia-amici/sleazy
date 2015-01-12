@@ -1,8 +1,8 @@
 angular.module('app').controller('search', function($scope, $http){
 
-	// SC.initialize({
-	// 	client_id: 'd1833a816c234ee6c77a76e948e9dbd1'
-	// })
+	SC.initialize({
+		client_id: 'd1833a816c234ee6c77a76e948e9dbd1'
+	})
 
 	$scope.removeSpace = function(string){
 	  return string.split(' ').join(''); 
@@ -26,36 +26,44 @@ angular.module('app').controller('search', function($scope, $http){
 		})
 	}
 
-	// $scope.playStopSong = function(song){
-	// 	SC.stream("/tracks/" + song.id, function(sound){
-	// 		if(song.playing === "true"){
-	// 			soundManager.stopAll();
-	// 		 	song.playing = "false"
-	// 		}
-	// 	 	else{
-	// 		  sound.play(song)
-	// 			$scope.thisTitle = song.title
-	// 			console.log($scope.thisTitle)
-	// 			song.playing = "true"
-	// 			// console.log(song.id)
-	// 		}
-	// 	})
-	// }
+	$scope.playStopSong = function(song){
+		SC.stream("/tracks/" + song.id, function(sound,error){
+			console.log(sound)
+			if(song.playing === "true"){
+				soundManager.stopAll();
+			 	song.playing = "false"
+			}
+		 	else{
+			  sound.play( 
+				 {onload: function() {
+      			if (this.readyState == 2) {
+        			console.log('ERROR')
+     				 }
+    				}}
+    					)
+				$scope.thisTitle = song.title
+				console.log($scope.thisTitle)
+				song.playing = "true"
+				// console.log(song.id)
+			}
+		
+		})
+	}
 	
-	// $scope.test = {}	
+	$scope.test = {}	
 
-	// $scope.submit = function(song){
-	// 	$scope.test = {object: song.permalink_url, title: song.title }
-	// 	var toSubmit = $scope.test
-	// 	$http.post('/tracks', toSubmit)
-	// 	.success(function(response) {
+	$scope.submit = function(song){
+		$scope.test = {object: song.permalink_url, title: song.title }
+		var toSubmit = $scope.test
+		$http.post('/tracks', toSubmit)
+		.success(function(response) {
 
-	// 	});
-	// 	console.log(toSubmit)
-	// }
+		});
+		console.log(toSubmit)
+	}
 
-	// $scope.stopSong = function(){
-	// 	soundManager.stopAll();
-	// 	song.playing = "false"
-	// }
+	$scope.stopSong = function(){
+		soundManager.stopAll();
+		song.playing = "false"
+	}
 });
