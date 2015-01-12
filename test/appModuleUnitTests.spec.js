@@ -40,7 +40,9 @@ describe('does the module exist', function(){
 				expect(scope.removeSpace(toSearchTemp)).toEqual('giorgia')
 				scope.songToSearch = scope.removeSpace(toSearchTemp)
 				// console.log(scGet + scope.songToSearch + limit)
-				$httpBackend.expectGET(scGet + scope.songToSearch + limit).respond(200)
+				$httpBackend.expectGET(scGet + scope.songToSearch + limit).respond({id:0, name: "iphone", assetTag:"a23456", owner:"qa", desc:"iOS4.3"})
+
+
 			})
 	
 })

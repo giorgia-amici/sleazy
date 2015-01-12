@@ -88,7 +88,7 @@ input[type="text"]:focus {
   text-align: center;
 }
 input[type="submit"] {
-/*  height: 67px;
+  height: 67px;
   width: 63px;
   text-indent: -10000px;
   border: none;
@@ -97,11 +97,11 @@ input[type="submit"] {
   top: 0;
   right: 0;
   z-index: 2;
-  cursor: pointer;*/
-  /*opacity: 0.4;*/
-  /*cursor: pointer;*/
-  /*transition: opacity .4s ease;*/
-  /*display: none;*/
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
+  display: none;
 }
 input, input[placeholder]{
     text-align:center;
