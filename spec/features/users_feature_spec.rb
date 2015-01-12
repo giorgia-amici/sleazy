@@ -19,11 +19,16 @@ feature 'user' do
 
 	context 'user signed in on the homepage' do
 
-		scenario 'should see sign out link', js: true do
-			sign_up
-		  # element = find('#user_password_confirmation')
-		  # element.native.send_key(:Enter)
-			expect(current_path).to eq '/tracks'
+		scenario 'should see sign out link', :js => true do
+			visit '/'
+		  click_link 'up'
+		  fill_in 'Email', with: 'test@example.com'
+		  fill_in 'Password', with: 'testtest'
+		  fill_in 'Password confirmation', with:'testtest'
+		  keypress = "var e = $.Event('keydown', { keyCode: 13 }); $('body').trigger(e);"
+		  page.driver.execute_script(keypress)
+			# expect(current_path).to eq '/tracks'
+			expect(page).to have_content 'out'
 		end
 
 		scenario 'should not see a sign in and sign up link' do
@@ -31,7 +36,18 @@ feature 'user' do
 			expect(page).not_to have_link 'in'
 			expect(page).not_to have_link 'up'
 		end
-
 	end
-	
 end
+
+# describe "Something" do
+#   it "uses javascript", :js => true do
+#      pending "write a test"
+#   end
+# end
+
+
+
+
+
+
+
