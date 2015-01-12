@@ -46,7 +46,7 @@ end
 group :test do 
 	gem 'rspec-rails'
 	gem 'capybara'
-  gem 'capybara-webkit'
+  # gem 'capybara-webkit'
   gem 'database_cleaner'
 end
 
