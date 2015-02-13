@@ -33,18 +33,6 @@ To view the deployed app on Heroku, visit the following link [Sleazy Sounds](htt
 - Ordering playlist featured on the home page according to most listened to and most recently added.
 - Subscribers upload an image of their choice to represent their playlist.
 
-To play around on our Sleazy Sounds website, clone the repository amd run;
-
-```sh
-$ bundle install
-```
-
-To view tests in RSpec and Karma, run :
-
-```sh
-$ rspec
-```
-
 ## How to run tests:
 
 ```sh
