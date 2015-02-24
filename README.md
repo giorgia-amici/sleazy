@@ -1,4 +1,6 @@
 #Sleazy Sounds
+
+See the [APP](http://sleazysounds.herokuapp.com/) 
 <img src = https://img.shields.io/badge/toBeRefactored-60%25-blue.svg>
 
 
