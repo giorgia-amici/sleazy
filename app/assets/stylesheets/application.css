@@ -311,3 +311,18 @@ footer {
   font-family: 'Source Code Pro', serif;
 
 }
+
+
+/*mobile with media query starts here*/
+
+/*mobile devices*/
+@media only screen and (max-device-width: 480px) {
+  #pause {
+  position: fixed;  
+  margin-top: 25px;
+  margin-left: -15px;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+}
+  }
