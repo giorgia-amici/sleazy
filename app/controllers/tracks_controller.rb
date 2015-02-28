@@ -12,13 +12,13 @@ class TracksController < ApplicationController
 	def create
 		@tracks = Track.where(:user_id => current_user.id)
 		if @tracks.count >= 10
-		redirect_to '/tracks'
-		flash[:alert] = '10 tracks max in your playlist, please delete 1 to add 1'
+  		flash[:alert] = '10 tracks max in your playlist, please delete 1 to add 1'
+      redirect_to '/tracks'
 		else
-		@track = Track.create(permit_params)
-		@track.user_id = current_user.id
-		@track.save
-		render_to tracks_path
+  		@track = Track.create(permit_params)
+  		@track.user_id = current_user.id
+  		@track.save
+  		render_to tracks_path
 		end
 	end
 
@@ -27,6 +27,5 @@ class TracksController < ApplicationController
 		@track.destroy
 		flash[:notice] = 'Track removed'
 		redirect_to '/tracks'
-	end
-	
+	end	
 end

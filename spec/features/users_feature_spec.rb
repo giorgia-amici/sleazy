@@ -35,15 +35,8 @@ feature 'user' do
 			expect(page).not_to have_link 'up'  
 		end
 	end
-
-
 end
 
-# describe "Something" do
-#   it "uses javascript", :js => true do
-#      pending "write a test"
-#   end
-# end
 
 
 
