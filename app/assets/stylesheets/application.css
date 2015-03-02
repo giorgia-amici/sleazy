@@ -309,20 +309,19 @@ footer {
   margin-top: 60px;
   list-style-type:none;
   font-family: 'Source Code Pro', serif;
-
 }
 
 
 /*mobile with media query starts here*/
 
-
 @media only screen and (max-device-width: 480px) {
   #pause {
   position: fixed;  
   margin-top: 25px;
-  margin-left: -15px;
+  margin-left: -30px;
   color: black;
   font-size: 30px;
   cursor: pointer;
 }
   }
+
