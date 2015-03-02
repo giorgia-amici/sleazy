@@ -6,7 +6,7 @@ See the [APP](http://sleazysounds.herokuapp.com/)
 
 ![alt tag](app/assets/images/sleazy_720.png)
 
-Sleazy Sounds is a music website that lets users search for, and play tracks from Soundcloud. It allows subscribers to save their favourite tunes to playlists, which are limitted to their top 10 tracks of the moment. The playlists are then saved to the subscribers' private dashboard and displayed on the home page.
+**Sleazy Sounds** is a music website that lets users search for, and play tracks from Soundcloud. It allows subscribers to save their favourite tunes to playlists, which are limitted to their top 10 tracks of the moment. The playlists are then saved to the subscribers' private dashboard and displayed on the home page.
 
 The project was set as a challenge for the 4-day 'Makerthon' at Makers Academy, and our team consisted of four music-loving ladies:
 [Giorgia](https://github.com/giorgia-amici), [Mishal](https://github.com/mishal1), [Clare](https://github.com/ctrembath), and myself.
