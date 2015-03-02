@@ -315,7 +315,7 @@ footer {
 
 /*mobile with media query starts here*/
 
-/*mobile devices* centered/
+
 @media only screen and (max-device-width: 480px) {
   #pause {
   position: fixed;  
