@@ -11,7 +11,7 @@ See the [APP](http://sleazysounds.herokuapp.com/)
 The project was set as a challenge for the 4-day 'Makerthon' at Makers Academy, and our team consisted of four music-loving ladies:
 [Giorgia](https://github.com/giorgia-amici), [Mishal](https://github.com/mishal1), [Clare](https://github.com/ctrembath), and myself.
 
-The site uses Soundcloud's API to access one of the broadest and most current music libraries in the world.
+The site uses __Soundcloud's API__ to access one of the broadest and most current music libraries in the world.
 To view the deployed app on Heroku, visit the following link [Sleazy Sounds](https://sleazysounds.herokuapp.com)
 
 ## Technologies used:
