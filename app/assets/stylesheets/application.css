@@ -15,7 +15,8 @@
 */
 
 
-
+@media screen and (min-width:880px){
+  
 header {
   padding: 30px;
   margin-top: 20px;
@@ -262,7 +263,7 @@ footer {
 }
 
 #pause {
-/*  position: fixed; */ 
+  position: fixed;  
   margin-right: 50%;
   margin-top: 15px;
   color: black;
@@ -311,7 +312,7 @@ footer {
   list-style-type:none;
   font-family: 'Source Code Pro', serif;
 }
-
+}
 
 /*mobile with media query starts here*/
 
