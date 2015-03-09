@@ -137,7 +137,7 @@ input, input[placeholder]{
 
 .signing-container {
   padding:0;
-  margin-top:0;
+  margin-top: -10px;
   width: 100%;
   height: 85px;
   background-color: #E5C687;
@@ -262,7 +262,8 @@ footer {
 }
 
 #pause {
-  position: fixed;  
+/*  position: fixed; */ 
+  margin-right: 50%;
   margin-top: 15px;
   color: black;
   font-size: 30px;
@@ -337,15 +338,24 @@ footer {
 
 /*iPad mediaquery portrait*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait){
-  #in{
+  #pause {
+    margin-right: 230px;
+  }
+  #in {
     float: left;
     margin-left: 26%;
   }
-  #up{
+  #up {
     float: right;
     margin-right: 46%;
   }
   h2 {
     margin-right: 180px;
+  }
+  .search {
+    margin-right: 65px;
+  }
+  footer{
+    margin-bottom: 269px;
   }
 }
