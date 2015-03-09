@@ -14,9 +14,6 @@
 *= require_self
 */
 
-
-@media screen and (min-width:880px){
-  
 header {
   padding: 30px;
   margin-top: 20px;
@@ -312,7 +309,7 @@ footer {
   list-style-type:none;
   font-family: 'Source Code Pro', serif;
 }
-}
+
 
 /*mobile with media query starts here*/
 
@@ -329,7 +326,7 @@ footer {
 
   /*iPad mediaquery landscape*/
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)  and (orientation : landscape){
+@media only screen and (min-device-width: 879px){
   #pause {
     color: black;
     position: fixed;
@@ -338,7 +335,7 @@ footer {
 }
 
 /*iPad mediaquery portrait*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait){
+@media only screen and (min-device-width: 879px) and (max-device-width: 1024px) and (orientation : portrait){
   #pause {
     margin-right: 230px;
   }
