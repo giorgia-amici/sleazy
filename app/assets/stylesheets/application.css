@@ -325,3 +325,11 @@ footer {
 }
   }
 
+  /*iPad mediaquery landscape*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #pause {
+    color: black;
+    position: fixed;
+    margin-left: -30px;
+  }
+}
