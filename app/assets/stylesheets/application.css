@@ -345,4 +345,7 @@ footer {
     float: right;
     margin-right: 46%;
   }
+  h2 {
+    margin-right: 180px;
+  }
 }
